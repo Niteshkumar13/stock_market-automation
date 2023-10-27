@@ -2,12 +2,12 @@ import requests
 import html
 from twilio.rest import Client
 url = 'https://www.alphavantage.co/query'
-new_api = "https://newsapi.org/v2/everything"
-api_for_news = "2cd1a6d79e214d8f871dcc0341f1dc8d"
+new_api = "https://newsapi.org/v2/everything https://newsapi.org"
+api_for_news = "pate your own api key from "
 req_parms = {
     "function":"TIME_SERIES_DAILY_ADJUSTED",
     "symbol":"IBM",
-    "apikey":"MW8SAEZL2A4AYRTN"
+    "apikey":"get your own api key from https://www.alphavantage.co"
 }
 
 req_to_api = requests.get(url,req_parms)
@@ -30,8 +30,8 @@ else:
 total_per =(round(p-q,2)/q)*100
 print(total_per)
 if total_per > 1:
-    account_sid = "AC46074ee522b4f6199495f36aae34d5c2"
-    auth_token = "a99247644dfec7f6e58fe5f9dceb5724"
+    account_sid = "get sid from twilio"
+    auth_token = "also this from twilio"
     news_prams = {
         "apikey":api_for_news,
         "qInTitle":"IBM"
@@ -47,7 +47,7 @@ if total_per > 1:
         message = client.messages.create(
             body="ka ho kareja",
             from_='+13613211019',
-            to='+916206687269'
+            to='+91your mobile no'
         )
 
         print(message.sid)
